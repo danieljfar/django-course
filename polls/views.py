@@ -1,5 +1,4 @@
-from http.client import HTTPResponse
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
@@ -47,4 +46,4 @@ def vote(request, question_id):
 
 
 def owner(request):
-    return HTTPResponse("Hello, world. e4c5f4bf is the polls index.")
+    return HttpResponse("Hello, world. e4c5f4bf is the polls index.")
